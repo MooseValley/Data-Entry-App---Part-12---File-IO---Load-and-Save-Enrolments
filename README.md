@@ -3,7 +3,7 @@
 
 Here is the Java, JavaFX, NetBeans, SceneBuilder source code for
 **Part 12** of my video tutorial series:
-* YouTube: TBA
+* YouTube: https://youtu.be/9gctczsb6O8
 * LBRY / Odysee: TBA
 
 Please see the description below the video for further details,
