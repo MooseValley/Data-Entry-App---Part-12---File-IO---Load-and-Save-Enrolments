@@ -1,0 +1,6 @@
+COIT11134
+Object Oriented Programming
+COIT11222
+Programming Fundamentals
+COIT20256
+Data Structures and Algorithms

@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package studentadminapp;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+/**
+ *
+ * @author MichaelO
+ */
+public class StudentAdminApp extends Application implements IExitable
+{
+    
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        stage.setOnCloseRequest(event -> { this.exitClick(); 
+                                           event.consume(); 
+                                         } );
+        System.out.println ("StudentAdminApp -> start ...");
+        
+        // Load the data from file(s) ...
+        CourseAddFXMLController.loadCoursesFromFile ();
+        StudentAddFXMLController.loadStudentsFromFile ();
+        EnrolmentAddFXMLController.loadEnrolmentsFromFile ();
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+}
